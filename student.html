@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>語彙テスト（生徒用）</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="student.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>語彙テスト（生徒用）</h1>
+
+    <div id="unitSelectArea">
+      <h2>単元を選択</h2>
+      <select id="unitSelect"></select>
+      <button onclick="startTest()">開始</button>
+    </div>
+
+    <div id="testArea" style="display:none;">
+      <p id="questionText"></p>
+      <input type="text" id="answerInput" placeholder="英語で入力" onkeydown="checkEnter(event)">
+      <button id="answerButton" onclick="checkAnswer()">答える</button>
+      <button id="nextButton" style="display:none;" onclick="nextQuestion()">次へ</button>
+      <p id="resultText"></p>
+      <p id="progressText"></p>
+      <button id="endButton" onclick="endTest()">終了</button>
+    </div>
+  </div>
+</body>
+</html>
